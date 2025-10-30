@@ -531,7 +531,11 @@
                     <p>Non esitare a contattarci per qualsiasi richiesta di informazioni o preventivo. Il nostro team è a tua disposizione per soddisfare le tue esigenze in logistica, trasporti e facchinaggio.</p>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm" action="mailto:bstsrls24@gmail.com" method="post" enctype="text/plain">
+                    <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p style="display:none">
+                            <label>Non compilare questo campo: <input name="bot-field" /></label>
+                        </p>
                         <div class="form-group">
                             <label for="name">Nome completo</label>
                             <input type="text" id="name" name="name" class="form-control" required>
@@ -622,31 +626,7 @@
             });
         });
 
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const phone = formData.get('phone');
-            const service = formData.get('service');
-            const message = formData.get('message');
-            
-            // Create mailto link
-            const subject = `Richiesta di contatto da ${name} - Servizio: ${service}`;
-            const body = `Nome: ${name}%0D%0AEmail: ${email}%0D%0ATelefono: ${phone}%0D%0AServizio richiesto: ${service}%0D%0A%0D%0AMessaggio:%0D%0A${message}`;
-            
-            // Open email client
-            window.location.href = `mailto:bstsrls24@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            
-            // Show success message
-            alert('Il tuo messaggio è stato preparato. Controlla il tuo client di posta per inviarlo.');
-            
-            // Reset form
-            this.reset();
-        });
+        // Netlify Forms handles submission; no custom JS needed
     </script>
 </body>
 </html>
