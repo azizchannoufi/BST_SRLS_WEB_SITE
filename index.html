@@ -356,6 +356,31 @@
             color: var(--white);
         }
         
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: var(--navy);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 20px;
+        }
+        
+        .social-link:hover {
+            background-color: var(--orange);
+            transform: translateY(-3px);
+        }
+        
         .contact-form {
             background-color: var(--white);
             padding: 30px;
@@ -665,7 +690,7 @@
                 <div class="video-card">
                     <div class="video-container">
                         <video controls muted poster="assets/video-poster.jpg">
-                            <source src="assets/video2.mp4" type="video/mp4">
+                            <source src="assets/vid1.mp4" type="video/mp4">
                             Il tuo browser non supporta il tag video.
                         </video>
                     </div>
@@ -710,15 +735,18 @@
                                 <p>(Disponibile su WhatsApp)</p>
                             </div>
                         </div>
-                        <!-- <div class="contact-item">
-                            <div class="contact-icon">👤</div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📷</div>
                             <div>
-                                <p><strong>Amministratore Unico</strong></p>
-                                <p>Oubakkou Walid</p>
+                                 <a href="https://www.instagram.com/brigel.luli?igsh=enIwbWs2dXh6Z3g4&utm_source=qr" title="Seguici su Instagram">
+                            Instagram
+                        </a>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
-                    <p>Contattaci per informazioni o per richiedere un preventivo personalizzato. Siamo a tua disposizione per ogni esigenza di facchinaggio e logistica.</p>
+                    
+                    
+                    <p style="margin-top: 20px;">Contattaci per informazioni o per richiedere un preventivo personalizzato. Siamo a tua disposizione per ogni esigenza di facchinaggio e logistica.</p>
                 </div>
                 <div class="contact-form">
                     <form id="contactForm">
@@ -762,6 +790,17 @@
                 <div class="footer-column">
                     <h3>B.S.T. SRLS</h3>
                     <p>Impresa artigiana abilitata ai sensi del D.M. 221/2003, specializzata in facchinaggio e logistica a Fiano Romano.</p>
+                    <div class="social-links" style="margin-top: 15px;">
+                        <a href="https://www.instagram.com/brigel.luli?igsh=enIwbWs2dXh6Z3g4&utm_source=qr" class="social-link" target="_blank" title="Instagram">
+                            📷
+                        </a>
+                        <!-- <a href="https://www.facebook.com/bstsrls" class="social-link" target="_blank" title="Facebook">
+                            📘
+                        </a>
+                        <a href="https://www.linkedin.com/company/bstsrls" class="social-link" target="_blank" title="LinkedIn">
+                            💼
+                        </a> -->
+                    </div>
                 </div>
                 <div class="footer-column">
                     <h3>Dati Aziendali</h3>
@@ -776,7 +815,6 @@
                     <ul class="footer-links">
                         <li>Via della Piazzetta 1</li>
                         <li>00065 Fiano Romano (RM)</li>
-                        <!-- <li>Amministratore: Oubakkou Walid</li> -->
                     </ul>
                 </div>
             </div>
